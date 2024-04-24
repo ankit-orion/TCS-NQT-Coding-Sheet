@@ -10,6 +10,8 @@ int main(){
         string s;
         cin >> s;
         m[s] = m[s] + 1;
+        // instead of this we can also use m[s]++ this will store the string as a key
+        // and it's count corresponsing to it
         // this will store the count corresponding to each keys
     }
     for(auto it:m){
