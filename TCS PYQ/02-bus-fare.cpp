@@ -20,24 +20,23 @@ int main(){
             end = i;
         }
     }
+    cout << start << " " << end << endl;
     if(start == end){
         cout << "INVALID INPUT";
     }
     else{
         if(start < end){
+            for(int i = end; i >= start; i--){
+                res += arr[i];
+            }
+        }
+        else{
             for(int i = start; i <= end; i++){
-                res += arr[i];
-            }
-        }else{
-            for(int i = start; i < 8; i++){
-                res += arr[i];
-            }
-            for(int i = 0; i <= end; i++){
                 res += arr[i];
             }
         }
     }
-    float fare = ceil(res / 1000.0) * 5;
+    cout << res << endl;
+    float fare = (res * 0.005);
     cout << fare;
-    return 0;
 }
