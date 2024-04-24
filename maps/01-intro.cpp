@@ -32,5 +32,22 @@ int main(){
             cout << ", ";
         }
     }
+    // Find the element with key 3
+    cout << "\nFinding the element with key 3\n";
+    it = m.find(3);
+    if(it != m.end()){
+        cout << (*it).first <<"->" << it->second << endl;
+        // can we use it.first ? No, because it is an iterator, not a pair
+    }
     return 0;
 }
+// notes about map
+// map takes O(logn) time for insertion, deletion, and searching
+// time to access an element in the map is O(logn)
+// suppose the size of the map is N so a for loop tc will be O(NlogN)
+// keys in the map are unique
+// keys in the map are sorted
+// map is implemented using a self-balancing binary search tree
+// map is implemented using red-black tree
+// map is implemented using a balanced binary search tree
+
