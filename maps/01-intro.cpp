@@ -33,7 +33,7 @@ int main(){
         }
     }
     // Find the element with key 3
-    cout << "\nFinding the element with key 3\n";
+    cout << "\nFinding the element wi  th key 3\n";
     it = m.find(3);
     if(it != m.end()){
         cout << (*it).first <<"->" << it->second << endl;
