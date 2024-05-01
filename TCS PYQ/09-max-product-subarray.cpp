@@ -11,11 +11,22 @@ int main(){
     int maxi = INT_MIN;
     // brute force approach could be to find out all the subarrays
     // and then we can store it's product in a variable at each step we can compare with the previpis one
-    for(int i = 0; i < n;i++){
-        int product = 1;
-        for(int j = i; j < n; j++){
-            product *= arr[j];
-            maxi = max(maxi, product);
+    // ! Brute force approach
+    // for(int i = 0; i < n;i++){
+    //     int product = 1;
+    //     for(int j = i; j < n; j++){
+    //         product *= arr[j];
+    //         maxi = max(maxi, product);
+    //     }
+    // }
+
+    // ^ Optimized approach
+    int product = 1;
+    for(int i = 0; i < n; i++){
+        product = product * arr[i];
+        maxi = max(maxi, product);
+        if(product == 0 ){
+            product = 1;
         }
     }
     cout << maxi << endl;
