@@ -17,6 +17,7 @@ int main(){
     int sum = 0;
     while(r < n){
         sum += arr[r];
+        // shrinking step to make sum <= k
         while(sum > k){
             sum = sum - arr[l];
             l++;
@@ -27,4 +28,8 @@ int main(){
         }
     }
     cout << maxLen << endl;
+    return 0;
+    // Time complexity: O(n)
+    // Space complexity: O(1)
+    
 }
