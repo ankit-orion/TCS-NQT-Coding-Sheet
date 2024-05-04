@@ -17,6 +17,8 @@ int main(){
             sum = sum + arr[j];
             if(sum <= k){
                 maxLen = max(maxLen, j-i+1);
+            }else if(sum > k){
+                break;
             }
         }
     }
