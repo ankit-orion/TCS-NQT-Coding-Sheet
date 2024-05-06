@@ -15,4 +15,18 @@
 // FL 70
 #include <iostream>
 using namespace std;
-
+int main(){
+    int N, L;
+    cin >> N >> L;
+    int TL = 0, FL = 0;
+    for(int i = 0; i <= N; i++){
+        if(4*i + 2*(N-i) == L){
+            TL = i;
+            FL = N-i;
+            break;
+        }
+    }
+    cout << "TL " << TL << endl;
+    cout << "FL " << FL << endl;
+    return 0;
+}
