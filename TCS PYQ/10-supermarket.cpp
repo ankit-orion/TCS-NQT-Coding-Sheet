@@ -13,5 +13,14 @@ int main(){
         price *= digit;
         n /= 10;
     }
+    // can also be done using recursion
+    // int price = 1;
+    // while(n){
+    //     price *= n%10;
+    //     n /= 10;
+    // }
+    cout << price;
+    return 0;
+}
     cout << price << endl;
 }
