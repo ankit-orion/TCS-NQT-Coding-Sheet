@@ -14,6 +14,7 @@ int main(){
     for(int i =0; i < n; i++){
         cin >> arr[i];
     }
+    // k is the size of the subarray
     int k;
     cin >> k;
     for(int i = 0; i <= n - k; i ++){
@@ -24,6 +25,9 @@ int main(){
             cout << arr[j] << " ";
             maxi= max(arr[j], maxi);
         }
+        cout << endl;
+        // printing the maximum element from the subarray
+        
         cout <<"Maximum element from the subarray " << maxi << endl;
     }
     return 0;
