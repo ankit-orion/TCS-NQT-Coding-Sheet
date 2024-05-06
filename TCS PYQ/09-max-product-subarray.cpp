@@ -30,6 +30,18 @@ int main(){
         }
     }
     cout << maxi << endl;
+    // it can be optimized by using kadane's algorithm
+    // kadane's algorithm can be used to find out the maximum sum subarray
+    // we can use the same algorithm to find out the maximum product subarray
+    // we can keep track of the maximum product ending at the current index
+    // and the minimum product ending at the current index
+    // if the current element is negative then we can swap the maximum and minimum product
+    // as the product of two negative numbers is positive
+    // if the current element is positive then we can multiply the current element with the maximum product ending at the previous index
+    // and minimum product ending at the previous index
+    // we can keep track of the maximum product ending at the current index
+    // and the maximum product so far
+    
     // time complexity will be O(n^2);
     // space complexity will be O(1); as no extra space requried
 }
