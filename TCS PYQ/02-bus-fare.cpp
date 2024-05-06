@@ -33,6 +33,8 @@ int main(){
         else{
             for(int i = start; i <= end; i++){
                 res += arr[i];
+                // cout << res << endl;
+                // cout << arr[i] << endl;
             }
         }
     }
