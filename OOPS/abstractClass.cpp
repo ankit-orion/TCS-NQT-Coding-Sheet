@@ -9,8 +9,8 @@ class Parent{
 };
 class Child : public Parent{
     public:
-    void display(){
-        cout << "This is the child class" << endl;
+    void display() override{
+        cout << "This is the display function" << endl;
     }
 };
 int main(){
