@@ -92,6 +92,7 @@ arr2 = [8, 10, 5, 7, 9]
 print("Smallest element in arr1:", find_min_element(arr1))
 print("Smallest element in arr2:", find_min_element(arr2))
 
+</details>
 
 ## Q 2. Find the Largest Element in an Array
 
