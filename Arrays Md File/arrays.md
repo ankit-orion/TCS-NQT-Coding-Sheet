@@ -57,10 +57,11 @@ int main() {
     cout << "Smallest element in arr2: " << findMinElement(arr2) << endl;
 
     return 0;
-}
+} ```
 
 </details> <details> <summary>☕ Java Code</summary>
 
+```Java
 import java.util.Arrays;
 
 public class Main {
@@ -78,12 +79,15 @@ public class Main {
         System.out.println("Smallest element in arr2: " + findMinElement(arr2));
     }
 }
+```
 
 </details> <details> <summary>🐍 Python Code</summary>
 
+```Python
 def find_min_element(arr):
     arr.sort()  # Sort the array
     return arr[0]  # Return the first (smallest) element
+```
 
 # Example usage
 arr1 = [2, 5, 1, 3, 0]
