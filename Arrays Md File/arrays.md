@@ -58,6 +58,9 @@ int main() {
 
     return 0;
 }
+
+</details> <details> <summary>☕ Java Code</summary>
+
 import java.util.Arrays;
 
 public class Main {
@@ -75,6 +78,9 @@ public class Main {
         System.out.println("Smallest element in arr2: " + findMinElement(arr2));
     }
 }
+
+</details> <details> <summary>🐍 Python Code</summary>
+
 def find_min_element(arr):
     arr.sort()  # Sort the array
     return arr[0]  # Return the first (smallest) element
