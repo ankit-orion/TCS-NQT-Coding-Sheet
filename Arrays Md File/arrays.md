@@ -2,7 +2,7 @@
 
 ---
 
-## ✅ 1. Find the Smallest Element in an Array
+## Q 1. Find the Smallest Element in an Array
 
 ### 🧩 Problem Description
 You're given an array of integers. Your task is to identify and return the smallest element in the array.
@@ -15,11 +15,6 @@ You're given an array of integers. Your task is to identify and return the small
 Input: `arr = [2, 5, 1, 3, 0]`  
 Output: `0`  
 _Explanation:_ The smallest number in the array is `0`.
-
-**Example 2:**  
-Input: `arr = [8, 10, 5, 7, 9]`  
-Output: `5`  
-_Explanation:_ The minimum element present is `5`.
 
 ---
 
@@ -96,4 +91,191 @@ arr2 = [8, 10, 5, 7, 9]
 
 print("Smallest element in arr1:", find_min_element(arr1))
 print("Smallest element in arr2:", find_min_element(arr2))
+
+
+## Q 2. Find the Largest Element in an Array
+
+### 🧩 Problem Description
+You're given an array of integers. Your task is to find and return the largest (maximum) element present in the array.
+
+---
+
+### 🧪 Examples
+
+**Example 1:**  
+Input: `arr = [2, 5, 1, 3, 0]`  
+Output: `5`  
+_Explanation:_ The largest number in the array is `5`.
+
+**Example 2:**  
+Input: `arr = [8, 10, 5, 7, 9]`  
+Output: `10`  
+_Explanation:_ The maximum element present is `10`.
+
+---
+
+### 💡 Approach 1: Sorting
+
+**Concept:**  
+Sort the array in ascending order. The last element (at index `n-1`) will be the largest.
+
+**Steps:**
+1. Sort the array.
+2. Return the last element (`arr[n-1]`).
+
+---
+
+### 💻 Code Solutions (Using Sorting)
+
+<details><summary>🔷 C++ Code</summary>
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to return the largest element after sorting
+int findMaxSorted(vector<int>& arr) {
+    sort(arr.begin(), arr.end());  // Sort in ascending order
+    return arr[arr.size() - 1];    // Last element is the largest
+}
+
+int main() {
+    vector<int> arr1 = {2, 5, 1, 3, 0};
+    vector<int> arr2 = {8, 10, 5, 7, 9};
+
+    cout << "The largest element in arr1: " << findMaxSorted(arr1) << endl;
+    cout << "The largest element in arr2: " << findMaxSorted(arr2) << endl;
+
+    return 0;
+}
+```
+</details><details><summary>☕ Java Code</summary>
+
+```Java
+import java.util.Arrays;
+
+public class Main {
+    // Returns the maximum element using sorting
+    static int findMaxSorted(int[] arr) {
+        Arrays.sort(arr);
+        return arr[arr.length - 1];  // Last element
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {2, 5, 1, 3, 0};
+        int[] arr2 = {8, 10, 5, 7, 9};
+
+        System.out.println("The largest element in arr1: " + findMaxSorted(arr1));
+        System.out.println("The largest element in arr2: " + findMaxSorted(arr2));
+    }
+}
+```
+</details><details><summary>🐍 Python Code</summary>
+
+```Python
+def find_max_sorted(arr):
+    arr.sort()  # Sort the array in ascending order
+    return arr[-1]  # Return the last element
+```
+
+Example usage
+arr1 = [2, 5, 1, 3, 0]
+arr2 = [8, 10, 5, 7, 9]
+
+print("The largest element in arr1:", find_max_sorted(arr1))
+print("The largest element in arr2:", find_max_sorted(arr2))
+
+📊 Time & Space Complexity (Sorting Approach)
+Time Complexity: O(N log N) — Due to sorting
+
+Space Complexity: O(1) if in-place sorting is used
+
+# 💡 Approach 2: Linear Scan (Optimal)
+Concept:
+Maintain a variable max_val initialized with the first element, and iterate through the array updating it when a larger element is found.
+
+Steps:
+
+Set max_val = arr[0]
+
+Traverse the array and update max_val when arr[i] > max_val
+
+Return max_val
+
+# 💻 Code Solutions (Using Max Variable)
+<details><summary>🔷 C++ Code</summary>
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+// Linear scan to find the largest element
+int findLargestElement(int arr[], int n) {
+    int max_val = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max_val)
+            max_val = arr[i];
+    }
+    return max_val;
+}
+
+int main() {
+    int arr1[] = {2, 5, 1, 3, 0};
+    int arr2[] = {8, 10, 5, 7, 9};
+
+    cout << "Largest in arr1: " << findLargestElement(arr1, 5) << endl;
+    cout << "Largest in arr2: " << findLargestElement(arr2, 5) << endl;
+
+    return 0;
+}
+```
+</details><details><summary>☕ Java Code</summary>
+
+```java
+public class Main {
+    // Linear scan to find maximum element
+    static int findMax(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {2, 5, 1, 3, 0};
+        int[] arr2 = {8, 10, 5, 7, 9};
+
+        System.out.println("Largest in arr1: " + findMax(arr1));
+        System.out.println("Largest in arr2: " + findMax(arr2));
+    }
+}
+```
+
+</details><details><summary>🐍 Python Code</summary>
+
+```python
+
+def find_max(arr):
+    max_val = arr[0]
+    for num in arr[1:]:
+        if num > max_val:
+            max_val = num
+    return max_val
+```
+
+# Example usage
+arr1 = [2, 5, 1, 3, 0]
+arr2 = [8, 10, 5, 7, 9]
+
+print("Largest in arr1:", find_max(arr1))
+print("Largest in arr2:", find_max(arr2))
+
+📊 Time & Space Complexity (Linear Scan)
+Time Complexity: O(N) — Each element visited once
+
+Space Complexity: O(1) — No extra space used
+
+
 
