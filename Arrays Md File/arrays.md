@@ -57,7 +57,8 @@ int main() {
     cout << "Smallest element in arr2: " << findMinElement(arr2) << endl;
 
     return 0;
-} ```
+} 
+```
 
 </details> <details> <summary>☕ Java Code</summary>
 
