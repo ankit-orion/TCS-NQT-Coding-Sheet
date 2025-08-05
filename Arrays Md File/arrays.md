@@ -275,14 +275,16 @@ Space Complexity: O(1) — No extra space used
 
 # Q3. Find Second Smallest and Second Largest Element in an array.
 
-**Problem Statement** : Given an array, find the **second smallest** and **second largest** element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
+### **Problem Statement** : Given an array, find the **second smallest** and **second largest** element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
 ---
 
 ## 🧠 Examples
 
-**Example 1:**
+### **Example 1:**
 Input: `[1,2,4,7,7,5] `
+
 Output: Second Smallest : `2`
+
 Second Largest : 5
 Explanation: The elements are as follows 1,2,3,5,7,7 and hence second largest of these is 5 and second smallest is 2.
 ---
@@ -373,7 +375,7 @@ def getElements(arr, n):
     large = arr[n-2]
     print("Second smallest is", small)
     print("Second largest is", large)
-    
+
 if __name__ == '__main__':
     arr = [1, 2, 4, 6, 7, 5]
     n = len(arr)
