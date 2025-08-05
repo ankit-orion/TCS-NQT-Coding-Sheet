@@ -171,19 +171,23 @@ public class Main {
     }
 }
 ```
-</details><details><summary>🐍 Python Code</summary>
+</details>
+
+<details><summary>🐍 Python Code</summary>
 
 ```Python
 def find_max_sorted(arr):
     arr.sort()  # Sort the array in ascending order
     return arr[-1]  # Return the last element
 ```
+</details>
 
-Example usage
+## Example usage
 arr1 = [2, 5, 1, 3, 0]
 arr2 = [8, 10, 5, 7, 9]
 
 print("The largest element in arr1:", find_max_sorted(arr1))
+
 print("The largest element in arr2:", find_max_sorted(arr2))
 
 📊 Time & Space Complexity (Sorting Approach)
@@ -391,7 +395,7 @@ if __name__ == '__main__':
     arr = [1, 2, 4, 6, 7, 5]
     n = len(arr)
     getElements(arr, n)
-    
+
 </details>
 
 
