@@ -382,10 +382,8 @@ if __name__ == '__main__':
     getElements(arr, n)
 
 </details>
-
-# 📂 Array Questions – TCS NQT Preparation
-
 ---
+</details>
 
 ## Q 4. Reverse a given Array
 
