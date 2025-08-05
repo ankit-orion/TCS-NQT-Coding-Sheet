@@ -182,20 +182,7 @@ def find_max_sorted(arr):
 ```
 </details>
 
-## Example usage
-arr1 = [2, 5, 1, 3, 0]
-arr2 = [8, 10, 5, 7, 9]
-
-print("The largest element in arr1:", find_max_sorted(arr1))
-
-print("The largest element in arr2:", find_max_sorted(arr2))
-
-📊 Time & Space Complexity (Sorting Approach)
-Time Complexity: O(N log N) — Due to sorting
-
-Space Complexity: O(1) if in-place sorting is used
-
-# 💡 Approach 2: Linear Scan (Optimal)
+### 💡 Approach 2: Linear Scan (Optimal)
 Concept:
 Maintain a variable max_val initialized with the first element, and iterate through the array updating it when a larger element is found.
 
@@ -288,15 +275,14 @@ Space Complexity: O(1) — No extra space used
 
 # Q3. Find Second Smallest and Second Largest Element in an array.
 
-**Problem Statement**  
- Given an array, find the **second smallest** and **second largest** element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
+**Problem Statement** : Given an array, find the **second smallest** and **second largest** element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
 ---
 
 ## 🧠 Examples
 
 **Example 1:**
-Input: [1,2,4,7,7,5]
-Output: Second Smallest : 2
+Input: `[1,2,4,7,7,5] `
+Output: Second Smallest : `2`
 Second Largest : 5
 Explanation: The elements are as follows 1,2,3,5,7,7 and hence second largest of these is 5 and second smallest is 2.
 ---
@@ -343,7 +329,7 @@ int main()
 ```
 </details>
 
-<details> <summary><b>🟠 Java</b></summary>
+<details> <summary><b>☕ Java</b></summary>
 
 ```Java
 import java.io.*;
@@ -376,7 +362,7 @@ public static void main(String[] args)
 
 </details>
 
-<details> <summary><b>🟠 Java</b></summary>
+<details> <summary><b>🐍 Python</b></summary>
 
 ```Python
 def getElements(arr, n):
@@ -387,10 +373,7 @@ def getElements(arr, n):
     large = arr[n-2]
     print("Second smallest is", small)
     print("Second largest is", large)
-
-
-
-
+    
 if __name__ == '__main__':
     arr = [1, 2, 4, 6, 7, 5]
     n = len(arr)
