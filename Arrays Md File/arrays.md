@@ -254,7 +254,9 @@ public class Main {
 }
 ```
 
-</details><details><summary>🐍 Python Code</summary>
+</details>
+
+<details><summary>🐍 Python Code</summary>
 
 ```python
 
@@ -277,6 +279,123 @@ print("Largest in arr2:", find_max(arr2))
 Time Complexity: O(N) — Each element visited once
 
 Space Complexity: O(1) — No extra space used
+
+</details>
+
+# Q3. Find Second Smallest and Second Largest Element in an array.
+
+**Problem Statement**  
+ Given an array, find the **second smallest** and **second largest** element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
+---
+
+## 🧠 Examples
+
+**Example 1:**
+Input: [1,2,4,7,7,5]
+Output: Second Smallest : 2
+Second Largest : 5
+Explanation: The elements are as follows 1,2,3,5,7,7 and hence second largest of these is 5 and second smallest is 2.
+---
+
+## 💡 Brute Force Approach: this approach only works if there are no duplicates.
+
+### 🔍 Intuition  
+What do we do to find the largest or the smallest element present in an array? We ideally sort them and the first element would be the smallest of all while the last element would be the largest. Can we find the second-smallest and second-largest using a similar approach?
+
+### 🪜 Approach
+1. Sort the array in ascending order
+
+2. The element present at the second index is the second smallest element
+
+3. The element present at the second index from the end is the second largest element
+
+---
+
+## 💻 Code
+
+<details>
+<summary><b>🔵 C++</b></summary>
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+void getElements(int arr[],int n)
+{
+    if(n==0 || n==1)
+        cout<<-1<<" "<<-1<<endl;  // edge case when only one element is present in array
+    sort(arr,arr+n);
+    int small=arr[1];
+    int large=arr[n-2];
+    cout<<"Second smallest is "<<small<<endl;
+    cout<<"Second largest is "<<large<<endl;
+}
+int main()
+{
+    int arr[]={1,2,4,6,7,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    getElements(arr,n);
+    return 0;
+}
+```
+</details>
+
+<details> <summary><b>🟠 Java</b></summary>
+
+```Java
+import java.io.*;
+import java.util.Arrays;
+class Test
+{
+static private void getElements(int[] arr, int n)
+{
+	if (n == 0 || n==1)
+	{
+		System.out.print(-1);
+		System.out.print(" ");
+		System.out.print(-1);
+		System.out.print("\n");
+	}
+	Arrays.sort(arr);
+	int small = arr[1];
+	int large = arr[n - 2];
+	System.out.println("Second smallest is "+small);
+	System.out.println("Second largest is "+large);
+}
+public static void main(String[] args)
+{
+	int[] arr = {1, 2, 4, 6, 7, 5};
+	int n = arr.length;
+	getElements(arr, n);
+}
+}
+```
+
+</details>
+
+<details> <summary><b>🟠 Java</b></summary>
+
+```Python
+def getElements(arr, n):
+    if n == 0 or n == 1:
+        print(-1, -1)  # edge case when only one element is present in array
+    arr.sort()
+    small = arr[1]
+    large = arr[n-2]
+    print("Second smallest is", small)
+    print("Second largest is", large)
+
+
+
+
+if __name__ == '__main__':
+    arr = [1, 2, 4, 6, 7, 5]
+    n = len(arr)
+    getElements(arr, n)
+    
+</details>
+
+
+
 
 
 
