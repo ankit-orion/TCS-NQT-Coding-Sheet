@@ -364,7 +364,8 @@ public static void main(String[] args)
 
 </details>
 
-<details> <summary><b>🐍 Python</b></summary>
+<details> 
+<summary><b>🐍 Python</b></summary>
 
 ```Python
 def getElements(arr, n):
@@ -380,16 +381,12 @@ if __name__ == '__main__':
     arr = [1, 2, 4, 6, 7, 5]
     n = len(arr)
     getElements(arr, n)
-
-</details>
----
+```
 </details>
 
 ## Q 4. Reverse a given Array
 
 ### 🧩 Problem Description: You are given an array. The task is to reverse the array and print it. 
-
----
 
 ### 🧪 Examples
 
